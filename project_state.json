@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "APK Mod website named 'Ameer Hamza' with dark theme, modded APK listings, download buttons, search/category features, and Internet Identity login (Google/Apple/Microsoft support).",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-internet-identity-authentication-so-users-can-log-in-and-log-out-using-their-internet-identity-which-supports-passkeys-linked-to-google-apple-and-microsoft-accounts",
+      "title": "Implement Internet Identity authentication so users can log in and log out using their Internet Identity (which supports passkeys linked to Google, Apple, and Microsoft accounts).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-apk-listings-page-that-displays-all-modded-apks-in-a-card-grid-showing-the-app-icon-name-category-badge-version-file-size-and-a-list-of-mod-features-each-card-includes-a-download-button-that-opens-the-download-url",
+      "title": "Build an APK listings page that displays all modded APKs in a card grid, showing the app icon, name, category badge, version, file size, and a list of mod features. Each card includes a Download button that opens the download URL.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-search-bar-and-category-filter-tabs-all-games-apps-at-the-top-of-the-listings-page-filtering-and-searching-should-update-the-displayed-apk-cards-in-real-time",
+      "title": "Add a search bar and category filter tabs (All, Games, Apps) at the top of the listings page. Filtering and searching should update the displayed APK cards in real time.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-dark-themed-visual-design-throughout-the-site-with-ameer-hamza-branding-use-a-deep-dark-background-vibrant-accent-colors-green-or-red-tones-evoking-modding-hacking-aesthetic-bold-typography-and-glowing-ui-highlights-include-a-branded-header-with-the-site-logo-name-ameer-hamza-apk-mod-and-a-footer-the-theme-must-be-consistent-across-all-pages",
+      "title": "Apply a dark-themed visual design throughout the site with 'Ameer Hamza' branding. Use a deep dark background, vibrant accent colors (green or red tones evoking modding/hacking aesthetic), bold typography, and glowing UI highlights. Include a branded header with the site logo/name 'Ameer Hamza APK Mod' and a footer. The theme must be consistent across all pages.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-render-a-branded-hero-banner-image-for-the-ameer-hamza-apk-mod-website-homepage-and-an-app-logo-icon-image-for-use-in-the-header-store-these-as-static-assets-in-frontend-public-assets-generated",
+      "title": "Generate and render a branded hero banner image for the Ameer Hamza APK Mod website homepage, and an app logo/icon image for use in the header. Store these as static assets in frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-apk-upload-submission-form-ui-accessible-to-authenticated-admin-users-the-form-must-include-fields-for-app-name-category-games-or-apps-dropdown-description-mod-features-dynamic-list-with-add-remove-version-file-size-download-url-and-icon-image-url-on-submission-the-form-calls-the-backend-to-save-the-new-apk-entry-show-a-success-or-error-message-after-submission",
+      "title": "Add an APK upload/submission form UI accessible to authenticated admin users. The form must include fields for: app name, category (Games or Apps dropdown), description, mod features (dynamic list with add/remove), version, file size, download URL, and icon image URL. On submission, the form calls the backend to save the new APK entry. Show a success or error message after submission.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-listings-page-to-load-apk-entries-dynamically-from-the-backend-instead-of-using-static-data-use-react-query-to-fetch-the-list-of-apks-from-the-backend-actor-and-display-them-in-the-existing-apkcard-grid",
+      "title": "Update the listings page to load APK entries dynamically from the backend instead of using static data. Use React Query to fetch the list of APKs from the backend actor and display them in the existing ApkCard grid.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-frontend-so-that-the-apk-upload-submission-button-and-modal-currently-shown-only-to-admins-in-the-header-are-also-visible-and-accessible-to-any-logged-in-user-not-just-admins",
+      "title": "Update the frontend so that the APK upload/submission button and modal (currently shown only to admins in the Header) are also visible and accessible to any logged-in user, not just admins.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Internet Identity login (Google/Apple/Microsoft support)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Modded APK games and apps listing with mod features description",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Download button for each APK",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Search and category feature (Games, Apps, etc.)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Dark theme with Ameer Hamza branding",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create a backend data store for APK listings. Each APK entry must include: name, category (Games or Apps), description, mod features (list of strings), version, file size, download URL, and an icon image URL.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add APK upload option so admins/users can upload new APK files to the site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add a backend data store for APK listings. Each APK entry must include: name, category (Games or Apps), description, mod features (list of strings), version, file size, download URL, and an icon image URL. Expose CRUD operations: add, update, delete, and list APK entries. Only authenticated users with an admin role can add, update, or delete entries.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Update the backend access control so that any authenticated (logged-in) user — not only admin — can call the addApk (or equivalent) endpoint to submit a new APK listing.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Ameer Hamza",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

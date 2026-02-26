@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main app component wrapping AppContent with QueryClientProvider; adds the Sonner Toaster component with dark cyberpunk theme styling for toast notifications.",
+  "frontend/src/hooks/useGetCallerUserProfile.ts": "Custom React Query hook that fetches the current user's profile from the backend, with proper loading state management to prevent profile setup modal flash.",
+  "frontend/src/hooks/useQueries.ts": "Contains all React Query hooks for backend interactions — profile save mutation, plus new hooks for fetching all APK listings (useGetAllListings) and mutations for adding, updating, and deleting listings with cache invalidation.",
+  "frontend/src/components/Header.tsx": "Sticky site header with branding, navigation links, and auth button; now shows the \"Upload APK\" button to all authenticated users (not just admins), and no longer imports or uses the useIsAdmin hook.",
+  "frontend/src/components/Footer.tsx": "Dark-themed footer with brand info, quick links, site features, copyright year, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/HeroBanner.tsx": "Hero section displaying the generated banner image with gradient overlays, site title, tagline, and feature highlights.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal dialog that appears on first login to collect the user's display name, using the saveCallerUserProfile backend mutation.",
+  "frontend/src/components/SearchBar.tsx": "Controlled search input with search icon and clear button, styled with dark theme and neon green focus highlights.",
+  "frontend/src/components/CategoryTabs.tsx": "Category filter buttons (All/Games/Apps) with item counts, styled with neon green active state and dark inactive state.",
+  "frontend/src/components/ApkCard.tsx": "APK listing card component updated to accept an optional `id` prop and uses a fallback avatar URL when iconUrl is empty, rendering all APkMetadata fields with the dark cyberpunk neon-green theme.",
+  "frontend/src/pages/ListingsPage.tsx": "Main listings page that now fetches APK data dynamically from the backend via useGetAllListings, with loading skeletons, error state, empty state (with admin hint), and search/category filtering over live data.",
+  "frontend/src/index.css": "Global styles with dark cyberpunk OKLCH color system, Google Fonts import (Inter + Space Grotesk), neon green scrollbar, selection highlight, and utility classes.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom dark theme colors (dark-base, dark-surface, dark-card), neon green palette, accent colors, neon box-shadow utilities, and display font family.",
+  "frontend/src/hooks/useIsAdmin.ts": "New React Query hook that calls `isCallerAdmin()` on the backend to check if the current authenticated user has admin privileges; only enabled when the user is authenticated.",
+  "frontend/src/components/ApkUploadModal.tsx": "Modal dialog for APK submission available to all authenticated users, with fields for name, category, description, mod features, version, file size, download URL, and icon URL; updated error message to reflect that login (not admin role) is required."
+}

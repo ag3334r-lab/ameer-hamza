@@ -1,0 +1,29 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Allow all logged-in users to submit APK listings",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Make APK upload button and modal accessible to all authenticated users, not just admins",
+      "acceptanceCriteria": [
+        "Any authenticated user sees the 'Upload APK' button in the header after logging in.",
+        "Clicking the button opens the ApkUploadModal for non-admin users.",
+        "Unauthenticated (logged-out) users do not see the upload button.",
+        "Submission from a non-admin user succeeds and the new APK appears in the listings."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Change the Upload APK button visibility condition from admin-only (isAdmin) to any authenticated user (isAuthenticated). Replace the isAdmin check with a check for identity existence so that all logged-in users see the button."
+        },
+        {
+          "path": "frontend/src/components/ApkUploadModal.tsx",
+          "operation": "modify",
+          "description": "Remove or update any admin-only guards or messaging in the modal. Ensure the modal's addListing mutation works for all authenticated users. Update any UI text or comments that imply admin-only access to reflect that any logged-in user can submit APK listings."
+        }
+      ]
+    }
+  ]
+}

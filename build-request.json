@@ -1,0 +1,58 @@
+{
+  "kind": "build_request",
+  "title": "Allow all logged-in users to submit APK listings",
+  "projectName": "Ameer Hamza APK Mod",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Update the backend access control so that any authenticated (logged-in) user — not only admin — can call the addApk (or equivalent) endpoint to submit a new APK listing.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Allow all logged-in users (not just admin) to upload APKs"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A non-admin authenticated user can successfully call the add APK backend function without receiving a permission error.",
+        "Unauthenticated (anonymous) callers are still rejected.",
+        "Admin users retain all existing CRUD privileges (update, delete, list)."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Update the frontend so that the APK upload/submission button and modal (currently shown only to admins in the Header) are also visible and accessible to any logged-in user, not just admins.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Allow all logged-in users (not just admin) to upload APKs"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Any authenticated user sees the 'Upload APK' button in the header after logging in.",
+        "Clicking the button opens the ApkUploadModal for non-admin users.",
+        "Unauthenticated (logged-out) users do not see the upload button.",
+        "Submission from a non-admin user succeeds and the new APK appears in the listings."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter the admin-only delete and update APK operations — those must remain restricted to admins only.",
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "Direct APK file upload to a storage service — only metadata/URL submission is in scope.",
+    "Changing the APK submission form fields or UI styling.",
+    "Adding a new user role beyond existing admin/user roles."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
